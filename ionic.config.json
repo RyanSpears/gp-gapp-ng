@@ -1,0 +1,7 @@
+{
+  "name": "gdayapp-ng",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
