@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" novalidate>
+
+    <ion-item>
+      <ion-label position="fixed">Email</ion-label>
+      <ion-input type="email" formControlName="email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="fixed">Password</ion-label>
+      <ion-input type="password" formControlName="password" name="password"></ion-input>
+    </ion-item>
+
+    <ion-button shape="round" expand="block" fill="outline" (click)="login()">
+      Login</ion-button>
+  </form>
+
+  <section *ngIf="response">
+    {{ response | json }}
+  </section>
+</ion-content>
